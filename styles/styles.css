@@ -17,31 +17,49 @@
 body{
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 21px; /*117%*/
-  background-color: #ffffff;
-  color: #000000;
-}
-
-
-.page-header{
+  line-height: 21px;
+  font-weight: 400;
   background-color: #ffffff;
   color: #000000;
 }
 
 .navigation-link{
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
-  font-size: 20px;
   line-height: 24px;
-  background-color: inherit;
   text-align: center;
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
-/* Можно отцентрировать весь блок или лучше каждый блок по отдельности? */
+
+.button{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 36px;
+  background: #756157;
+  border-radius: 4px;
+  align-items: center;
+  padding: 8px 50px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+}
+
+.light-button{
+  background-color: #82b3d3;
+}
+
+.current-button{
+  background-color: #7db54f;
+}
+
+.transparent-button{
+  background-color: transparent;
+}
+
+/* Можно отцентровать весь блок или лучше каждый блок по отдельности? */
 .main-index{
-  background-color: #ffffff;
-  color: #000000;
   text-align: center;
 }
 
@@ -59,32 +77,35 @@ body{
   /* text-align: center; */
 }
 
-.advantages-description{
+.big-paragraph{
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
-.advantages-text{
+.small-paragraph{
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
-.advantages-item-title{
+.block-title{
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
 }
 
-.advantages-item-description{
+.block-description{
   color: #333333;
 }
 
-/* Почему p не наследует белый цвет */
 .color-dark{
   background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.color-dark .advantages-item-description{
   color: #ffffff;
 }
 
@@ -94,4 +115,122 @@ body{
 
 .color-accent{
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+.newsletter{
+  background-image: url(../images/subscribe.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #5f9ea0;
+  color: #ffffff;
+}
+
+.newsletter-button{
+  background-color: #82b3d3;
+}
+
+.newsletter-text{
+  color: #ffffff;
+}
+
+.field{
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.footer-contact-phone{
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-catalog{
+}
+
+.main-catalog-header{
+  background-image: url(../images/filter_background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #5f9ea0;
+  color: #ffffff;
+}
+
+.main-catalog-title{
+  font-weight: 700;
+  font-style: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-link{
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control-input{
+  line-height: 23px;
+}
+
+.sorting-text{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.hotel-card{
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.product-card-link{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card-text{
+  color: #333333;
+}
+
+b{
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+}
+
+.hotel-card-rating-text{
+  max-width: 140px;
+  height: 37px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #F2F2F2;
+  color: #333333;
+  border-radius: 4px;
+}
+
+.current-pagination{
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.transparent-newsletter{
+  background-image: none;
+  background-color: transparent;
+  color: #000000;
+}
+
+.transparent-newsletter .small-paragraph{
+  color: #000000;
 }
