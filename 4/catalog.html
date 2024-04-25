@@ -11,7 +11,7 @@
   <body>
     <header class="page-header">
       <a href="index.html">
-        <img src="images/logo_sedona.svg" width="138" height="64" alt="логотип">
+        <img src="images/logo_sedona.svg" alt="логотип" width="138" height="64">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -25,20 +25,18 @@
             <a class="navigation-link current-navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#">
               <span class="visually-hidden">Отелей в избранном</span>
               <span class="notification-icon">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="button-want button" href="#">Хочу сюда!</a>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link button-want button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -110,12 +108,12 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label for="from-price"> от </label>
-                  <!-- какой name здесь прописать? Одинаковый или лучше разный, если одинаковый, то отправиться как массив -->
-                  <input type="number" id="from-price" placeholder="0" name="price">
+                  <!-- какой name здесь прописать? Одинаковый или лучше разный, если одинаковый, то отправится как массив -->
+                  <input class="filter-field" type="number" id="from-price" placeholder="0" name="price">
                 </li>
                 <li class="catalog-filter-item">
                   <label for="to-price"> до </label>
-                  <input type="number" id="to-price" placeholder="9000" name="price">
+                  <input class="filter-field" type="number" id="to-price" placeholder="9000" name="price">
                 </li>
               </ul>
             </fieldset>
@@ -148,8 +146,8 @@
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="images/hotels/amara_resot.jpg" width="300" height="212"
-                alt="пещера и звёздное небо">
+              <img class="product-card-image" src="images/hotels/amara_resot.jpg" alt="пещера и звёздное небо"
+                width="300" height="212">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <!-- проверить,что обёртка не лишняя -->
@@ -166,13 +164,13 @@
               <p class="hotel-stars">
                 <span class="visually-hidden">четыре звезды</span>
               </p>
-              <p class="hotel-card-rating-text">Рейтинг: 8,5</p>
+              <p class="rating">Рейтинг: 8,5</p>
             </div>
           </li>
           <li class="hotel-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="images/hotels/poco_diablo.jpg" width="300" height="212"
-                alt="скала на фоне пасмурного неба и радуги">
+              <img class="product-card-image" src="images/hotels/poco_diablo.jpg"
+                alt="скала на фоне пасмурного неба и радуги" width="300" height="212">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
             <div class="hotel-card-text">
@@ -188,13 +186,13 @@
               <p class="hotel-stars">
                 <span class="visually-hidden">четыре звезды</span>
               </p>
-              <p class="hotel-card-rating-text">Рейтинг: 9,2</p>
+              <p class="rating">Рейтинг: 9,2</p>
             </div>
           </li>
           <li class="hotel-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="images/hotels/quail_inn.jpg" width="300" height="212"
-                alt="коричневая скала на фоне голубого неба">
+              <img class="product-card-image" src="images/hotels/quail_inn.jpg"
+                alt="коричневая скала на фоне голубого неба" width="300" height="212">
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
             <div class="hotel-card-text">
@@ -209,13 +207,13 @@
               <p class="hotel-stars">
                 <span class="visually-hidden">три звезды</span>
               </p>
-              <p class="hotel-card-rating-text">Рейтинг: 6,9</p>
+              <p class="rating">Рейтинг: 6,9</p>
             </div>
           </li>
           <li class="hotel-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="images/hotels/greentree_inn.jpg" width="300" height="212"
-                alt="горы каньона ночью">
+              <img class="product-card-image" src="images/hotels/greentree_inn.jpg" alt="горы каньона ночью" width="300"
+                height="212">
               <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
             <div class="hotel-card-text">
@@ -230,13 +228,13 @@
               <p class="hotel-stars">
                 <span class="visually-hidden">две звезды</span>
               </p>
-              <p class="hotel-card-rating-text">Рейтинг: 5,0</p>
+              <p class="rating">Рейтинг: 5,0</p>
             </div>
           </li>
         </ul>
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a href="#" class="pagination-link current-pagination">1</a>
+            <a href="#" class="pagination-link light-button current-pagination">1</a>
           </li>
           <li class="pagination-item">
             <a href="#" class="pagination-link light-button">2</a>
