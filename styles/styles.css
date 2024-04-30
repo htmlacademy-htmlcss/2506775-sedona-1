@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -6,7 +6,7 @@
   font-display: swap;
 }
 
-@font-face{
+@font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
@@ -14,84 +14,452 @@
   font-display: swap;
 }
 
-body{
+html {
+  height: 100%;
+}
+
+body {
+  /* Typography */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 21px; /*117%*/
-  background-color: #ffffff;
+  line-height: 21px;
+  font-weight: 400;
   color: #000000;
+
+  /* Decor */
+  background-color: #f2f2f2;
+
+  margin: 0;
+  height: 100%;
 }
 
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 
-.page-header{
   background-color: #ffffff;
-  color: #000000;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
 }
 
-.navigation-link{
-  font-family: "PT Sans", sans-serif;
+/* General Styles */
+.button {
+  /* Block model */
+  display: inline-block;
+
+  /* Typography */
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  background-color: inherit;
   text-align: center;
-  color: inherit;
-  text-decoration: none;
-}
-/* Можно отцентрировать весь блок или лучше каждый блок по отдельности? */
-.main-index{
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-}
-
-.hero-block{
-  background-image: url(../images/index_background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #5f9ea0;
   color: #ffffff;
-  /* text-align: center; */
+
+  /* Decor */
+  background: #756157;
+  border-radius: 4px;
+  padding: 8px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
 }
 
-
-.advantages{
-  /* text-align: center; */
+.light-button {
+  background-color: #82b3d3;
+  color: #ffffff;
 }
 
-.advantages-description{
+.current-button {
+  background-color: #7db54f;
+}
+
+.transparent-button {
+  background-color: transparent;
+}
+
+.color-dark {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.color-light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.color-accent {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
-.advantages-text{
+.subtitle {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
-.advantages-item-title{
+.block-title{
   font-weight: 700;
   font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
 }
 
-.advantages-item-description{
+.block-subtitle{
   color: #333333;
 }
+/* Header */
+.navigation-link {
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Почему p не наследует белый цвет */
-.color-dark{
-  background-color: #82b3d3;
+.user-navigation-link{
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.button-want{
   color: #ffffff;
 }
 
-.color-light{
+.notification-icon{
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7db54f;
+}
+
+
+/* Можно отцентровать весь блок или лучше каждый блок по отдельности? */
+.main-index {
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.page-navigation {
+  display: flex;
+  margin-left: 60px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-link {
+  padding: 20px 16px;
+}
+
+.user-navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Временный padding, до вставки декоративной картинки */
+.user-navigation-link {
+  padding: 20px 16px;
+}
+
+/* Hero */
+.hero-block {
+  color: #ffffff;
+
+  background-color: #5f9ea0;
+  background-image: url("../images/index_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* text-align: center; */
+}
+
+/* Advantages */
+.color-dark .advantages-item-subtitle{
+  color: #ffffff;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  width: 400px;
+  padding: 103px 0;
+}
+
+.block-with-picture {
+  display: flex;
+}
+
+.advantages-image {
+  display: block;
+  height: auto;
+}
+/* Services */
+.services-color-accent {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.color-accent{
-  background-color: rgba(131, 179, 211, 0.2);
+.services-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.services-item {
+  width: 400px;
+  padding: 81px 85px;
+}
+/* Search Section */
+.button-search{
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+}
+.newsletter-index {
+  color: #ffffff;
+
+  background-color: #5f9ea0;
+  background-image: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter-index .subtitle {
+  color: #ffffff;
+}
+
+.button-newsletter {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+
+.field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* Footer */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+}
+
+.footer-contact-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Catalog */
+.main-catalog {}
+
+/* Catalog Header */
+.main-catalog-header {
+  color: #ffffff;
+
+  background-color: #5f9ea0;
+  background-image: url("../images/filter_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-catalog-title {
+  font-weight: 700;
+  font-style: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-list {
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color:inherit;
+  text-decoration: none;
+}
+
+.catalog-filter-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 70px;
+}
+
+.catalog-filter-list {
+  list-style: none;
+}
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control-input {
+  line-height: 23px;
+}
+
+.filter-field{
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+  color: #000000;
+}
+/* Sorting Section */
+.sorting-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hotels-number {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.select-control {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+/* Cards */
+.hotel-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.hotel-card:not(:last-child) {
+  margin-right: 20px;
+}
+
+.product-card-link {
+  text-decoration: none;
+}
+
+.product-card-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.hotel-card-price {
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.hotel-card-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Pagination */
+.pagination-list {
+  list-style: none;
+  display: flex;
+}
+
+.current-pagination {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.pagination-points{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
 }
