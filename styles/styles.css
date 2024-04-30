@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   /* Typography */
   font-family: "PT Sans", sans-serif;
@@ -23,8 +27,21 @@ body {
   color: #000000;
 
   /* Decor */
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 
+  margin: 0;
+  height: 100%;
+}
+
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
 }
 
 /* General Styles */
@@ -130,6 +147,43 @@ body {
 /* Можно отцентровать весь блок или лучше каждый блок по отдельности? */
 .main-index {
   text-align: center;
+  flex-grow: 1;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.page-navigation {
+  display: flex;
+  margin-left: 60px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-link {
+  padding: 20px 16px;
+}
+
+.user-navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Временный padding, до вставки декоративной картинки */
+.user-navigation-link {
+  padding: 20px 16px;
 }
 
 /* Hero */
@@ -148,12 +202,41 @@ body {
   color: #ffffff;
 }
 
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.advantages-item {
+  width: 400px;
+  padding: 103px 0;
+}
+
+.block-with-picture {
+  display: flex;
+}
+
+.advantages-image {
+  display: block;
+  height: auto;
+}
 /* Services */
 .services-color-accent {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.services-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.services-item {
+  width: 400px;
+  padding: 81px 85px;
+}
 /* Search Section */
 .button-search{
   font-size: 20px;
@@ -161,6 +244,9 @@ body {
 }
 
 /* Newsletter */
+.newsletter {
+  text-align: center;
+}
 .newsletter-index {
   color: #ffffff;
 
@@ -188,6 +274,17 @@ body {
 }
 
 /* Footer */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+}
+
 .footer-contact-phone {
   font-size: 40px;
   line-height: 40px;
@@ -214,6 +311,15 @@ body {
   line-height: 78px;
 }
 
+.breadcrumbs-list {
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 28px;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
@@ -221,6 +327,16 @@ body {
   text-decoration: none;
 }
 
+.catalog-filter-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 70px;
+}
+
+.catalog-filter-list {
+  list-style: none;
+}
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
@@ -240,6 +356,11 @@ body {
   color: #000000;
 }
 /* Sorting Section */
+.sorting-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .hotels-number {
   font-weight: 700;
   font-size: 30px;
@@ -258,10 +379,20 @@ body {
 }
 
 /* Cards */
+.hotel-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hotel-card {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   padding: 20px;
+}
+
+.hotel-card:not(:last-child) {
+  margin-right: 20px;
 }
 
 .product-card-link {
@@ -275,10 +406,17 @@ body {
   color: #000000;
 }
 
-.hotel-card-text {
+.hotel-card-price {
+  display: flex;
+  justify-content: space-between;
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+}
+
+.hotel-card-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .rating {
@@ -290,19 +428,38 @@ body {
   text-transform: uppercase;
 }
 
+.hotel-card-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 /* Pagination */
-.pagination-item {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+.pagination-list {
+  list-style: none;
+  display: flex;
 }
 
 .current-pagination {
   color: #000000;
-
   background-color: #f2f2f2;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
   text-decoration: none;
+}
+
+.pagination-points{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
 }
