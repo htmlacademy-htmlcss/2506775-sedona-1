@@ -445,7 +445,6 @@ body {
   background-image: url("../images/filter_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 56px;
 }
 
 .main-catalog-title {
@@ -509,7 +508,7 @@ body {
 }
 /* Sorting Section */
 .sorting {
-  padding: 0 70px;
+  padding: 50px 60px 70px;
 }
 .sorting-block {
   display: flex;
