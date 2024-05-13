@@ -262,6 +262,7 @@ body {
 
 .advantages-block {
   padding: 69px 274px;
+  margin-bottom: 21px;
 }
 
 .advantages-description {
@@ -284,6 +285,13 @@ body {
   padding: 112px 85px;
 }
 
+
+.advantages-block-description {
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
+
 .block-with-picture {
   display: flex;
 }
@@ -292,9 +300,12 @@ body {
   display: block;
   width: 800px;
   height: auto;
+  object-fit: contain;
 }
 
 .advantages-item-title {
+  width: 175px;
+  margin: 0 auto;
   margin-bottom: 62px;
 }
 /* Services */
@@ -474,7 +485,7 @@ body {
 
 .catalog-filter-form {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 70px;
 }
@@ -512,6 +523,7 @@ body {
 }
 .sorting-block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 46px;
@@ -525,6 +537,7 @@ body {
 }
 
 .select-control {
+  width: 292px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -532,13 +545,14 @@ body {
   color: #333333;
 
   background-color: #ffffff;
-  padding: 14px 131px 14px 20px;
+  padding: 14px 0 14px 20px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
 .sorting-button-block {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,48px);
   gap: 8px;
 }
 
@@ -557,8 +571,8 @@ body {
 /* Cards */
 .hotel-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,340px);
   gap: 20px;
   padding: 0;
   margin: 0;
@@ -649,16 +663,17 @@ body {
 }
 
 .pagination-link{
-  display: flex;
-  justify-content: center;
-  width: 60px;
+  display: block;
+  text-align: center;
+  min-width: 60px;
+  min-height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
   background-color: #82b3d3;
   color: #ffffff;
-  padding: 12px 24px;
+  padding: 12px 10px;
   border-radius: 4px;
 }
 
