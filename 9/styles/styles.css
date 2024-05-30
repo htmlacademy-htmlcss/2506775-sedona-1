@@ -819,6 +819,37 @@ body {
   background-color: rgba(255, 255, 255, 1);
 }
 
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.range-toggle:hover,
+.range-toggle:focus-visible {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 .filter-field {
   font-family: inherit;
   font-weight: 700;
