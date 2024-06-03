@@ -695,6 +695,255 @@ body {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
+/* Modal */
+
+.modal-background {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.user-navigation-item-search:focus-within .modal-background {
+  display: block;
+}
+
+.modal-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  width: 717px;
+  padding: 64px 70px;
+  font-family: "PT Sans", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.modal-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.modal-button-close {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  border: none;
+  margin-right: auto;
+  padding: 0;
+  margin-right: -16px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.modal-button-close::before,
+.modal-button-close::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.modal-button-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-button-close::after {
+  transform: rotate(-45deg);
+}
+
+
+.modal-button-close:hover,
+.modal-button-close:focus-visible {
+  background-color: #e6e6e6;
+}
+
+.modal-button-close:active::before{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-button-close:active::after{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-form-date-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 23px;
+}
+.modal-form-date-item {
+  display: grid;
+  grid-template-columns: 137px 440px;
+  grid-template-rows: 48px 21px;
+  row-gap: 4px;
+}
+
+.modal-form-date-item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.date-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-self: center;
+}
+.date-input {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 290px 12px 20px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  background-image: url("../images/decorative_icons/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+}
+
+.date-desc {
+  font-size: 16px;
+  line-height: 21px;
+  grid-column: 2 / 3;
+  margin-left: 20px;
+}
+
+.date-start-desc {
+  color: #FF5757
+}
+
+.date-end-desc {
+  color: #333333;
+}
+
+.modal-form-people-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 88px;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.modal-form-people-item {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.people-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.wrapper-modal-input {
+  height: 48px;
+  display: flex;
+}
+
+.modal-button {
+  width: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-button::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(117, 97, 87, 0.3);
+  background-position: center;
+  margin: auto;
+}
+
+.modal-button:hover::before,
+.modal-button:focus-visible::before {
+  background-color: #000000;
+}
+
+.modal-button:active::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-minus::before {
+  mask-image: url("../images/decorative_icons/minus.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button-plus::before {
+  mask-image: url("../images/decorative_icons/plus.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.people-input {
+  font-family: "PT Sans", sans-serif;
+  width: 31px;
+  background-color:  #f2f2f2;
+  border: none;
+  padding-left: 9px;
+  appearance: textfield;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  outline: none;
+}
+
+.people-input::-webkit-outer-spin-button,
+.people-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal-form-submit-button {
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+  padding: 18px 15px;
+}
+
 /* Catalog Header */
 .main-catalog-header {
   padding: 35px 70px 70px;
@@ -953,6 +1202,20 @@ body {
   border: none;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+  appearance: textfield;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.filter-field:hover {
+  background-color:  #e6e6e6;
+}
+
+.filter-field:focus-visible {
+  background-color:  #e6e6e6;
+}
+
+.filter-field:active {
+  background-color: #f2f2f2;
 }
 
 .catalog-range-list {
