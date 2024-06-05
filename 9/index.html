@@ -9,7 +9,6 @@
 </head>
 
   <body>
-    <div class="popover-background"></div>
     <div class="page-wrapper">
       <header class="page-header">
         <nav class="navigation">
@@ -28,65 +27,10 @@
             </li>
           </ul>
           <ul class="user-navigation-list">
-            <li class="user-navigation-item user-navigation-item-search">
+            <li class="user-navigation-item">
               <a class="user-navigation-link search-link" href="#">
                 <span class="visually-hidden">Поиск гостиниц.</span>
               </a>
-              <div class="modal-background">
-                <div class="modal-container">
-                  <div class="modal-header">
-                    <h2 class="modal-title">
-                      Поиск гостиницы в Седоне
-                    </h2>
-                    <button class="modal-button-close" title="Закрыть окно">
-                      <span class="visually-hidden">Закрыть окно поиска</span>
-                    </button>
-                  </div>
-                  <div class="modal-wrapper-form">
-                    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-                      <ul class="modal-form-date-list">
-                        <li class="modal-form-date-item">
-                          <label class="date-label" for="start-input">Дата заезда:</label>
-                          <input class="date-input" type="text" id="start-input" name="date start" value="27 апреля 2020">
-                          <span class="date-desc date-start-desc">Мы не можем отправить вас в прошлое.</span>
-                        </li>
-                        <li class="modal-form-date-item">
-                          <label class="date-label" for="end-input">Дата выезда:</label>
-                          <input class="date-input" type="text" id="end-input" name="date end" value="1 сентября 2021">
-                          <span class="date-desc date-end-desc">На эти даты есть свободные номера. Пока есть.</span>
-                        </li>
-                      </ul>
-                      <ul class="modal-form-people-list">
-                        <li class="modal-form-people-item">
-                          <label class="people-label" for="adults">Взрослые:</label>
-                          <div class="wrapper-modal-input">
-                            <button class="modal-button button-minus" type="button">
-                              <span class="visually-hidden">Убрать одного взрослого человека.</span>
-                            </button>
-                            <input class="people-input" type="number" id="adults" name="adults" value="2" min="1" max="10">
-                            <button class="modal-button button-plus" type="button">
-                              <span class="visually-hidden">Добавить одного взрослого человека.</span>
-                            </button>
-                          </div>
-                        </li>
-                        <li class="modal-form-people-item">
-                          <label class="people-label" for="children">Дети:</label>
-                          <div class="wrapper-modal-input">
-                            <button class="modal-button button-minus" type="button">
-                              <span class="visually-hidden">Убрать одного ребёнка.</span>
-                            </button>
-                            <input class="people-input" type="number" id="children" name="children" value="2" min="0" max="30">
-                            <button class="modal-button button-plus" type="button">
-                              <span class="visually-hidden">Добавить одного ребёнка.</span>
-                            </button>
-                          </div>
-                        </li>
-                      </ul>
-                      <button class="modal-form-submit-button button light-button" type="submit">Найти</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
             </li>
             <li class="user-navigation-item">
               <a class="user-navigation-link heart-link" href="#">
@@ -232,6 +176,70 @@
           <span class="visually-hidden">переход на сайт разработчика</span>
         </a>
       </footer>
+      <div class="modal-background">
+        <div class="modal-container">
+          <div class="modal-header">
+            <h2 class="modal-title">
+              Поиск гостиницы в Седоне
+            </h2>
+            <button class="modal-button-close" title="Закрыть окно" type="button">
+              <span class="visually-hidden">Закрыть окно поиска</span>
+            </button>
+          </div>
+          <div class="modal-wrapper-form">
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+              <ul class="modal-form-date-list">
+                <li class="modal-form-date-item">
+                  <label class="date-label" for="start-input">Дата заезда:</label>
+                  <input class="date-input" type="text" id="start-input" name="date-start" value="27 апреля 2020" placeholder="Укажите дату">
+                  <span class="date-desc date-start-desc">Мы не можем отправить вас в прошлое.</span>
+                </li>
+                <li class="modal-form-date-item">
+                  <label class="date-label" for="end-input">Дата выезда:</label>
+                  <input class="date-input" type="text" id="end-input" name="date-end" value="1 сентября 2021" placeholder="Укажите дату">
+                  <span class="date-desc date-end-desc">На эти даты есть свободные номера. Пока есть.</span>
+                </li>
+              </ul>
+              <ul class="modal-form-people-list">
+                <li class="modal-form-people-item">
+                  <label class="people-label" for="adults">Взрослые:</label>
+                  <div class="wrapper-modal-input">
+                    <button class="modal-button button-minus" type="button">
+                      <span class="visually-hidden">Убрать одного взрослого человека.</span>
+                    </button>
+                    <input class="people-input" type="number" id="adults" name="adults" value="2" min="1" max="99">
+                    <button class="modal-button button-plus" type="button">
+                      <span class="visually-hidden">Добавить одного взрослого человека.</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="modal-form-people-item modal-form-children">
+                  <span class="people-label children-label">
+                    <label class="people-label" for="children">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                      </span>
+                    </span>
+                  </span>
+                  <div class="wrapper-modal-input">
+                    <button class="modal-button button-minus" type="button">
+                      <span class="visually-hidden">Убрать одного ребёнка.</span>
+                    </button>
+                    <input class="people-input" type="number" id="children" name="children" value="2" min="0" max="99">
+                    <button class="modal-button button-plus" type="button">
+                      <span class="visually-hidden">Добавить одного ребёнка.</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <button class="modal-form-submit-button button light-button" type="submit">Найти</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 

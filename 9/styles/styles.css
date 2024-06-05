@@ -698,7 +698,6 @@ body {
 /* Modal */
 
 .modal-background {
-  display: none;
   position: fixed;
   z-index: 11;
   top: 0;
@@ -706,10 +705,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-}
-
-.user-navigation-item-search:focus-within .modal-background {
-  display: block;
 }
 
 .modal-container {
@@ -724,6 +719,12 @@ body {
   color: #000000;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+}
+
+
+/* Добавить этот класс рядом с классом .modal-background, для закрытия модального окна */
+.modal-close {
+  display: none;
 }
 
 .modal-header {
@@ -747,35 +748,23 @@ body {
   border-radius: 50%;
   background-color: #f2f2f2;
   border: none;
-  margin-right: auto;
   padding: 0;
   margin-right: -16px;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.modal-button-close::before,
-.modal-button-close::after {
+.modal-button-close::before {
   content: "";
-  position: absolute;
-  left: 19px;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
   display: block;
-  width: 14px;
-  height: 2px;
   background-color: #000000;
+  margin: 0 auto;
+  mask-image: url("../images/decorative_icons/cross.svg");
+  mask-position: center;
   transition: background-color 0.2s ease-in-out;
 }
-
-.modal-button-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-button-close::after {
-  transform: rotate(-45deg);
-}
-
 
 .modal-button-close:hover,
 .modal-button-close:focus-visible {
@@ -783,10 +772,6 @@ body {
 }
 
 .modal-button-close:active::before{
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-button-close:active::after{
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -813,18 +798,25 @@ body {
   line-height: 24px;
   align-self: center;
 }
+
 .date-input {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 290px 12px 20px;
+  padding: 12px 250px 12px 20px;
   background-color: #f2f2f2;
   border-radius: 4px;
   border: none;
   background-image: url("../images/decorative_icons/date.svg");
   background-repeat: no-repeat;
   background-position: right 22px center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.date-input:hover,
+.date-input:focus-visible {
+  background-color: #e6e6e6;
 }
 
 .date-desc {
@@ -864,21 +856,86 @@ body {
   line-height: 24px;
 }
 
+.children-label {
+  padding-right: 36px;
+}
+
+.tooltip {
+  position: absolute;
+  margin-left: 10px;
+}
+
+.tooltip-toggle {
+  display: block;
+  border: none;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #83b3d3;
+  background-image: url("../images/decorative_icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.tooltip-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background-color:  #333333;
+  color: #ffffff;
+  width: 256px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  padding: 15px 18px 18px 22px;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 9px;
+  background-image: url("../images/decorative_icons/triangle.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus-visible + .tooltip-text {
+  display: block;
+}
+
 .wrapper-modal-input {
   height: 48px;
   display: flex;
 }
 
 .modal-button {
+  position: relative;
   width: 40px;
   background-color: #f2f2f2;
   border: none;
   height: 100%;
   padding: 0;
+  outline: none;
 }
 
 .modal-button::before {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: 20px;
   height: 20px;
@@ -887,13 +944,17 @@ body {
   margin: auto;
 }
 
-.modal-button:hover::before,
-.modal-button:focus-visible::before {
-  background-color: #000000;
-}
-
-.modal-button:active::before {
-  background-color: rgba(0, 0, 0, 0.2);
+.modal-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-minus {
@@ -918,17 +979,43 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
+
+.modal-button:hover::before,
+.modal-button:focus-visible::before {
+  background-color: #000000;
+}
+
+.modal-button:active::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-button:focus-visible::after {
+  border: 3px solid #82b3d3;
+  border-radius: 4px;
+}
+
 .people-input {
   font-family: "PT Sans", sans-serif;
   width: 31px;
   background-color:  #f2f2f2;
-  border: none;
-  padding-left: 9px;
+  padding: 0 5px;
   appearance: textfield;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.people-input:hover {
+  background-color: #e6e6e6;
+}
+
+.people-input:focus-visible {
   outline: none;
+  background-color: #e6e6e6;
+  border: 2px solid #68a2ca;
 }
 
 .people-input::-webkit-outer-spin-button,
@@ -1060,6 +1147,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .control-input {
@@ -1113,16 +1201,16 @@ body {
   line-height: 23px;
 }
 
-.control:hover .control-mark{
+.control-input:hover + .control-mark{
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control:hover .control-label {
+.control-input:hover ~ .control-label {
   color: rgba(255, 255, 255, 0.6);
 }
 
 .control-input:focus-visible + .control-mark{
-  outline: 4px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .control:active .control-mark{
