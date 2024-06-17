@@ -20,21 +20,19 @@
   box-sizing: border-box;
 }
 
-
-
 html {
   height: 100%;
 }
 
 body {
+  margin: 0;
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #000000;
   background-color: #f2f2f2;
-  margin: 0;
-  height: 100%;
 }
 
 .page-wrapper {
@@ -43,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
@@ -157,7 +156,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .subtitle {
@@ -389,7 +388,6 @@ body {
   background-image: url("../images/main_decorate.svg");
   left: 0;
   bottom: 0;
-
 }
 
 .hero-image {
@@ -405,7 +403,7 @@ body {
 }
 
 .advantages-block {
-  padding: 69px 274px;
+  padding: 69px 272px;
   margin-bottom: 21px;
 }
 
@@ -427,7 +425,7 @@ body {
 
 .advantages-item {
   width: 400px;
-  padding: 112px 85px;
+  padding: 112px 84px;
 }
 
 .advantages-block-description {
@@ -495,7 +493,7 @@ body {
 
 .services-item {
   width: 400px;
-  padding: 77px 85px 81px 85px;
+  padding: 75px 85px 81px 85px;
 }
 
 .services-item-title {
@@ -524,6 +522,7 @@ body {
 .title-present::before {
   background-image: url("../images/decorative_icons/souvenir.svg");
 }
+
 /* Search Section */
 .search {
   text-align: center;
@@ -531,7 +530,7 @@ body {
 }
 
 .search-text {
-  margin-bottom: 54px;
+  margin-bottom: 52px;
 }
 
 .button-search {
@@ -552,6 +551,7 @@ body {
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 98px;
 }
 
 .newsletter-subtitle {
@@ -579,11 +579,11 @@ body {
   flex-grow: 1;
   font-family: inherit;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 25px;
   background-color: #f2f2f2;
   color: #000000;
   border-radius: 4px 0 0 4px;
-  padding: 14px 0 14px 20px;
+  padding: 13px 0 13px 20px;
   border: none;
   transition: background-color 0.2s ease-in-out;
 }
@@ -607,15 +607,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 70px 30px 67px;
+  padding: 44px 70px 30px 70px;
 }
 
 .footer-social-list {
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: 200px;
+  width: 141px;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -625,15 +624,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:11px 13px;
+  padding: 11px 13px;
+  width: 47px;
+  height: 40px;
 }
 
 .social-link::before {
   content: "";
   display: block;
   background-color: #83b3d3;
-  width: 24px;
-  height: 17px;
+  width: 47px;
+  height: 40px;
   mask-repeat: no-repeat;
   mask-position: center;
   transition: background-color 0.3s ease-in-out;
@@ -666,9 +667,11 @@ body {
 .footer-contact-phone {
   font-size: 40px;
   line-height: 40px;
+  text-align: center;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s ease-in-out;
+  width: 720px;
 }
 
 .footer-contact-phone:hover {
@@ -701,7 +704,6 @@ body {
 
 .developer-logo:focus-visible::before {
   background-color: #756157;
-  outline: none;
 }
 
 .developer-logo:active::before {
@@ -709,7 +711,6 @@ body {
 }
 
 /* Modal */
-
 .modal-background {
   position: fixed;
   z-index: 11;
@@ -734,8 +735,6 @@ body {
   border-radius: 30px;
 }
 
-
-/* Добавить этот класс рядом с классом .modal-background, для закрытия модального окна */
 .modal-close {
   display: none;
 }
@@ -766,7 +765,7 @@ body {
   background-color: #f2f2f2;
   border: none;
   padding: 0;
-  margin-right: -16px;
+  margin-right: -18px;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
   flex-shrink: 0;
@@ -789,7 +788,7 @@ body {
   background-color: #e6e6e6;
 }
 
-.modal-button-close:active::before{
+.modal-button-close:active::before {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -832,7 +831,7 @@ body {
   border: none;
   background-image: url("../images/decorative_icons/date.svg");
   background-repeat: no-repeat;
-  background-position: right 22px center;
+  background-position: right 20px center;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -928,7 +927,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  background-color:  #333333;
+  background-color: #333333;
   color: #ffffff;
   width: 256px;
   border-radius: 10px;
@@ -1041,7 +1040,7 @@ body {
 .people-input {
   font-family: "PT Sans", sans-serif;
   width: 31px;
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
   padding: 0 3px;
   appearance: textfield;
   font-weight: 700;
@@ -1078,11 +1077,12 @@ body {
   line-height: 24px;
   width: 100%;
   padding: 18px 15px;
+  border-radius: 10px;
 }
 
 /* Catalog Header */
 .main-catalog-header {
-  padding: 35px 70px 70px;
+  padding: 35px 70px 73px;
   color: #ffffff;
   background-color: #5f9ea0;
   background-image: url("../images/filter_bg.jpg");
@@ -1251,7 +1251,7 @@ body {
   line-height: 23px;
 }
 
-.control-input:hover + .control-mark{
+.control-input:hover + .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1259,11 +1259,11 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:focus-visible + .control-mark{
+.control-input:focus-visible + .control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control:active .control-mark{
+.control:active .control-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1275,7 +1275,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:disabled ~ .control-label{
+.control-input:disabled ~ .control-label {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1351,11 +1351,11 @@ body {
 }
 
 .filter-field:hover {
-  background-color:  #e6e6e6;
+  background-color: #e6e6e6;
 }
 
 .filter-field:focus-visible {
-  background-color:  #e6e6e6;
+  background-color: #e6e6e6;
 }
 
 .filter-field:active {
@@ -1410,14 +1410,14 @@ body {
 
 /* Sorting Section */
 .sorting {
-  padding: 53px 69px 60px 70px;
+  padding: 51px 69px 60px 70px;
 }
 
 .sorting-block {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 46px;
+  margin-bottom: 40px;
 }
 
 .hotels-number {
@@ -1428,15 +1428,12 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-right: auto;
-}
-
-.select-wrapper {
-  width: 295px;
-  margin-right: 70px;
+  padding-top: 7px;
 }
 
 .select-control {
-  width: 100%;
+  width: 294px;
+  margin-right: 68px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -1450,7 +1447,7 @@ body {
   appearance: none;
   background-image: url("../images/decorative_icons/arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 13px center;
+  background-position: right 14px center;
   transition: border 0.2s ease-in-out;
 }
 
@@ -1459,7 +1456,7 @@ body {
 }
 
 .select-control:focus-visible {
-  outline-color:  #68a2ca;
+  outline-color: #68a2ca;
 }
 
 .select-control:disabled {
@@ -1469,7 +1466,7 @@ body {
 .sorting-button-block {
   display: grid;
   grid-template-columns: repeat(3, 48px);
-  gap: 8px;
+  gap: 9px;
 }
 
 .sorting-button {
@@ -1517,10 +1514,10 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 18px 20px;
   padding: 0;
   margin: 0;
-  margin-bottom: 81px;
+  margin-bottom: 80px;
 }
 
 .hotel-card {
@@ -1532,7 +1529,7 @@ body {
   row-gap: 16px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  padding: 18px 19px;
+  padding: 20px 19px;
 }
 
 .product-card-link {
@@ -1603,7 +1600,7 @@ body {
 }
 
 .current-button:active {
-  background-color:  #7db54f;
+  background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1618,7 +1615,7 @@ body {
   background-color: #f2f2f2;
   color: #333333;
   text-transform: uppercase;
-  padding: 8px 22px;
+  padding: 9px 22px 8px 23px;
   border-radius: 4px;
   margin: 0;
 }
@@ -1629,6 +1626,7 @@ body {
   background-repeat: no-repeat;
   height: 17px;
 }
+
 .one-star {
   background-image: url("../images/decorative_icons/star.svg");
   background-position: 0 0;
@@ -1667,8 +1665,8 @@ body {
 .pagination-link {
   display: block;
   text-align: center;
-  min-width: 59px;
-  min-height: 59px;
+  min-width: 60px;
+  min-height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -1686,8 +1684,8 @@ body {
   border: 1px solid #82b3d3;
 }
 
-.pagination-link:not(.current-pagination):not(.pagination-points):active{
-  background-color:  #82b3d3;
+.pagination-link:not(.current-pagination):not(.pagination-points):active {
+  background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1708,7 +1706,6 @@ body {
 .pagination-points {
   font-weight: 400;
   font-size: 22px;
-  line-height: 26px;
   color: #000000;
   background-color: #ffffff;
 }
