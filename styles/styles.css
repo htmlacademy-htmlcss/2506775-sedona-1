@@ -607,7 +607,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 44px 70px 30px 70px;
+  padding: 45px 70px 30px 70px;
 }
 
 .footer-social-list {
@@ -854,7 +854,7 @@ body {
 }
 
 .date-start-desc {
-  color: #FF5757
+  color: #ff5757;
 }
 
 .date-end-desc {
@@ -1260,7 +1260,7 @@ body {
 }
 
 .control-input:focus-visible + .control-mark {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .control:active .control-mark {
